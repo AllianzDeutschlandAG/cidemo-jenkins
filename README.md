@@ -1,10 +1,8 @@
 # JavaScript CI Demo - Jenkins
 
-For the Do-It-Yourself full stack JavaScript continuous integration (CI) demo, we will use [Jenkins](https://jenkins.io/) as our automation server for builds, tests and deployments. Jenkins is an open-source tool anyone can easily setup.
+For the Do-It-Yourself Full Stack JavaScript Continuous Integration (CI) demo, we will use [Jenkins](https://jenkins.io/) as our automation server for builds, tests and deployments. Jenkins is an open-source tool anyone can easily setup. We will use the [official Jenkins image from the Docker Registry](https://hub.docker.com/_/jenkins/).
 
-We will use the [official Jenkins image from the Docker Registry](https://hub.docker.com/_/jenkins/).
-
-Our `Dockerfile` has minimal lines of code
+Our `Dockerfile` has minimal lines of code:
 
 ```
 FROM jenkins:latest
@@ -16,7 +14,7 @@ RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
 ## Plugins
 
-The list inside `plugins.txt` are from the default installtion, plus two more for the NodeJS Plugin:
+The list inside `plugins.txt` are from the default installation, plus two more for the NodeJS Plugin:
 
 - [NodeJS Plugin](https://plugins.jenkins.io/nodejs)
 - [Config File Provider Plugin](https://wiki.jenkins.io/display/JENKINS/Config+File+Provider+Plugin)
