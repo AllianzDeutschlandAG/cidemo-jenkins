@@ -9,3 +9,5 @@ COPY ["ref/init.groovy.d/*", "/usr/share/jenkins/ref/init.groovy.d/"]
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
