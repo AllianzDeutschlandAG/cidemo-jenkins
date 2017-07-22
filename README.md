@@ -2,22 +2,25 @@
 
 For the Do-It-Yourself Full Stack JavaScript Continuous Integration (CI) demo, we will use [Jenkins](https://jenkins.io/) as our automation server for builds, tests and deployments. Jenkins is an open-source tool anyone can easily setup. We will use the [official Jenkins image from the Docker Registry](https://hub.docker.com/_/jenkins/).
 
-Our `Dockerfile` has minimal lines of code:
+## Preinstalled Configurations
 
-```
-FROM jenkins:latest
+Our `Dockerfile` has minimal lines of code on top of the base image it
 
-COPY plugins.txt /usr/share/jenkins/plugins.txt
+- sets the default admin username and password to `cidemo`
+- skips setup wizard
+- sets basic security defaults to avoid warnings on load
+- pre-installs set of plugins
 
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
-```
+These changes were made for convenience for a presentation and are not meant as a recommendation. For more more about preinstalled configurations, see the [official docker image readme](https://github.com/jenkinsci/docker/blob/master/README.md).
 
 ## Plugins
 
 The list inside `plugins.txt` are from the default installation, plus two more for the NodeJS Plugin:
 
 - [NodeJS Plugin](https://plugins.jenkins.io/nodejs)
-- [Config File Provider Plugin](https://wiki.jenkins.io/display/JENKINS/Config+File+Provider+Plugin)
+- [Pipeline Utility Steps](https://plugins.jenkins.io/pipeline-utility-steps) for zipping files
+- [Job DSL](https://plugins.jenkins.io/job-dsl) for programmatically adding jobs
+- [Blue Ocean](https://plugins.jenkins.io/blueocean) for a redesigned Jenkins experience
 
 The `plugins.sh` script is provided in the official image.
 
