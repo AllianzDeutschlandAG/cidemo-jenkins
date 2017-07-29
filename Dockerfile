@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.71-alpine
+FROM jenkins/jenkins:2.71
 
 COPY ["config/jenkins.CLI.xml", "/var/jenkins_home"]
 COPY ["ref/init.groovy.d/*", "/usr/share/jenkins/ref/init.groovy.d/"]
