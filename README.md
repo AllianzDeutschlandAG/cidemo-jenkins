@@ -47,6 +47,7 @@ The `plugins.txt` list are from the default installation plus:
 - [Pipeline Utility Steps](https://plugins.jenkins.io/pipeline-utility-steps) for zipping files
 - [Pipeline: Build Step](https://plugins.jenkins.io/pipeline-build-step) for triggering other jobs
 - [Job DSL](https://plugins.jenkins.io/job-dsl) for programmatically adding jobs
+- [Timestamper](https://plugins.jenkins.io/timestamper) for timestamps in console output
 - [Blue Ocean](https://plugins.jenkins.io/blueocean) for a redesigned Jenkins experience
 - [Artifactory](https://plugins.jenkins.io/artifactory) for managing our build artifactrs
 - [Cloud Foundry](https://plugins.jenkins.io/cloudfoundry) for deploying to our cloud platform
