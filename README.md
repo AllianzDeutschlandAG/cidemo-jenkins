@@ -44,6 +44,7 @@ These changes were made for convenience for a presentation and are _not meant as
 The `plugins.txt` list are from the default installation plus:
 
 - [NodeJS Plugin](https://plugins.jenkins.io/nodejs)
+- [Pipeline 2.5](https://plugins.jenkins.io/workflow-aggregator) for latest syntax including declarative pipelines
 - [Pipeline Utility Steps](https://plugins.jenkins.io/pipeline-utility-steps) for zipping files
 - [Pipeline: Build Step](https://plugins.jenkins.io/pipeline-build-step) for triggering other jobs
 - [Job DSL](https://plugins.jenkins.io/job-dsl) for programmatically adding jobs
