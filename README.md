@@ -20,7 +20,7 @@ docker-compose up -d --build jenkins
 Our `Dockerfile` has minimal lines of code:
 
 ```
-FROM jenkins/jenkins:2.70-alpine
+FROM jenkins/jenkins:2.71-alpine
 
 COPY ["config/jenkins.CLI.xml", "/var/jenkins_home"]
 COPY ["ref/init.groovy.d/*", "/usr/share/jenkins/ref/init.groovy.d/"]
