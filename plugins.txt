@@ -44,6 +44,7 @@ mailer:1.20
 matrix-project:1.11
 metrics:3.1.2.10
 nodejs:1.2.2
+pipeline-build-step:2.5.1
 pipeline-graph-analysis:1.4
 pipeline-input-step:2.7
 pipeline-model-api:1.1.8
