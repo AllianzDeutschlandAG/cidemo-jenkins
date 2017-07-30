@@ -4,6 +4,10 @@ import com.cloudbees.plugins.credentials.impl.*;
 import com.cloudbees.plugins.credentials.*;
 import com.cloudbees.plugins.credentials.domains.*;
 
-// Create Placeholder Credentials
-Credentials c = (Credentials) new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL, "github", "GitHub.com Credentials", "github-user", "secret")
-SystemCredentialsProvider.getInstance().getStore().addCredentials(Domain.global(), c)
+Credentials c1 = (Credentials) new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL, "github", "GitHub.com", "github-user", "placeholder")
+Credentials c2 = (Credentials) new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL, "pcf", "PCF Dev", "user", "pass")
+Credentials c3 = (Credentials) new UsernamePasswordCredentialsImpl(CredentialsScope.GLOBAL, "artifactory", "Artifactory OSS", "admin", "password")
+
+SystemCredentialsProvider.getInstance().getStore().addCredentials(Domain.global(), c1)
+SystemCredentialsProvider.getInstance().getStore().addCredentials(Domain.global(), c2)
+SystemCredentialsProvider.getInstance().getStore().addCredentials(Domain.global(), c3)
