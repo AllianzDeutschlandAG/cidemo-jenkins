@@ -50,5 +50,4 @@ The `plugins.txt` list are from the default installation plus:
 - [Job DSL](https://plugins.jenkins.io/job-dsl) for programmatically adding jobs
 - [Timestamper](https://plugins.jenkins.io/timestamper) for timestamps in console output
 - [Blue Ocean](https://plugins.jenkins.io/blueocean) for a redesigned Jenkins experience
-- [Artifactory](https://plugins.jenkins.io/artifactory) for managing our build artifactrs
-- [Cloud Foundry](https://plugins.jenkins.io/cloudfoundry) for deploying to our cloud platform
+- [Artifactory](https://plugins.jenkins.io/artifactory) for managing our build artifacts
