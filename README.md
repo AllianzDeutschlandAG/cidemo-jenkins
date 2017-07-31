@@ -2,6 +2,8 @@
 
 For the Do-It-Yourself Full Stack JavaScript Continuous Integration (CI) demo, we will use [Jenkins](https://jenkins.io/) as our automation server for builds, tests and deployments. Jenkins is an open-source tool anyone can easily setup. 
 
+![Beautiful UI with Blue Ocean UI](./images/blue-ocean-1.png)
+
 We will use the [Jenkins community image from the Docker Registry](https://hub.docker.com/r/jenkins/jenkins/).
 
 ## Use
