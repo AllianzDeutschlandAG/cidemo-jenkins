@@ -44,6 +44,65 @@ These changes were made for convenience for a presentation:
 
 and are _not meant as a recommendation_! For more more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
 
+## Pipelines
+
+Jenkins is an automation server. We define workflows and jobs with pipelines, which can be groovy or a beautiful DSL, for example:
+
+```groovy
+#!/usr/bin/env groovy
+
+pipeline {
+    agent any
+
+    options {
+        disableConcurrentBuilds()
+        timestamps()
+    }
+
+    tools {
+        nodejs 'node-7'
+    }
+
+    parameters {
+        string( name: 'APP_BASE_URL',
+                defaultValue: 'https://localhost/',
+                description: 'App Base URL to run e2e tests against')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('NPM Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('NPM Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('E2E Tests') {
+            environment {
+                APP_BASE_URL = "$params.APP_BASE_URL"
+            }
+
+            steps {
+                sh 'npm run e2e:prod'
+            }
+        }
+    }
+}
+```
+
+The pipeline code above is just an example of simple it is to define jobs using the [Jenkins Declarative Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/).
+
 ## License (MIT)
 
 Copyright (c) 2017 Julie Ng.
