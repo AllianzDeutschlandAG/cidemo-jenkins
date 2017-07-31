@@ -15,33 +15,16 @@ docker-compose up -d --build jenkins
 - Then you can view Jenkins in your browser at [http://localhost:8080/](http://localhost:8080/)
 - Login with username `cidemo` and password `cidemo`.
 
-## Preinstalled Configurations
+## Jenkins Image
 
-Our `Dockerfile` has minimal lines of code:
+Our `Dockerfile` has created a custom Jenkins image, which two additional features:
 
-```
-FROM jenkins/jenkins:2.71-alpine
+- the Chrome browser is installed and will be used for unit tests.
+- we've added the Cloud Foundry CLI which will be using for deployment.
 
-COPY ["config/jenkins.CLI.xml", "/var/jenkins_home"]
-COPY ["ref/init.groovy.d/*", "/usr/share/jenkins/ref/init.groovy.d/"]
+### Plugins
 
-COPY ["plugins.txt", "/usr/share/jenkins/ref/plugins.txt"]
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
-
-ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
-```
-
-which on top of the base image it:
-
-- skips setup wizard.
-- sets basic security defaults to avoid warnings on load.
-- pre-installs set of plugins.
-
-These changes were made for convenience for a presentation and are _not meant as a recommendation_. For more more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
-
-## Plugins
-
-The `plugins.txt` list are from the default installation plus:
+We also preloaded our Jenkins with some plugins for our toolchain and an improved workflow:
 
 - [NodeJS Plugin](https://plugins.jenkins.io/nodejs)
 - [Pipeline 2.5](https://plugins.jenkins.io/workflow-aggregator) for latest syntax including declarative pipelines
@@ -51,3 +34,12 @@ The `plugins.txt` list are from the default installation plus:
 - [Timestamper](https://plugins.jenkins.io/timestamper) for timestamps in console output
 - [Blue Ocean](https://plugins.jenkins.io/blueocean) for a redesigned Jenkins experience
 - [Artifactory](https://plugins.jenkins.io/artifactory) for managing our build artifacts
+
+### Skip Startup
+
+These changes were made for convenience for a presentation:
+
+- skips setup wizard.
+- sets basic security defaults to avoid warnings on load.
+
+and are _not meant as a recommendation_! For more more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
