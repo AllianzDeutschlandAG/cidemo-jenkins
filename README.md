@@ -44,7 +44,7 @@ These changes were made for convenience for a presentation:
 - skips setup wizard.
 - sets basic security defaults to avoid warnings on load.
 
-and are _not meant as a recommendation_! For more more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
+and are _not meant as a recommendation_! For more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
 
 ## Pipelines
 
