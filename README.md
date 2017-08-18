@@ -84,12 +84,6 @@ pipeline {
             }
         }
 
-        stage('NPM Install') {
-            steps {
-                sh 'npm install'
-            }
-        }
-
         stage('E2E Tests') {
             environment {
                 APP_BASE_URL = "$params.APP_BASE_URL"
