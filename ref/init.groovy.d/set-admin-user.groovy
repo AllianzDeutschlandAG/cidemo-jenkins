@@ -2,9 +2,9 @@
 import hudson.security.*
 import jenkins.model.*
 
-def instance = Jenkins.getInstance()
+println "--> Configuring default user and password"
 
-println "--> creating local user 'admin'"
+def instance = Jenkins.getInstance()
 
 def hudsonRealm = new HudsonPrivateSecurityRealm(false)
 hudsonRealm.createAccount('cidemo','cidemo')

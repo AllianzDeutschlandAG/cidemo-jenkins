@@ -2,8 +2,8 @@
 import jenkins.model.*
 import jenkins.security.s2m.*
 
-println "--> Enable Slave → Master Access Control"
+println "--> Setting master -> slave security"
 
 Jenkins.instance.injector.getInstance(AdminWhitelistRule.class)
-    .setMasterKillSwitch(false);
+    .setMasterKillSwitch(false)
 Jenkins.instance.save()
