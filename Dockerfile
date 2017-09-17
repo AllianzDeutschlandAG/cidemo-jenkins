@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.71
+FROM jenkins/jenkins:2.78
 
 # Install Chrome as root
 USER root
