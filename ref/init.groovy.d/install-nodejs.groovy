@@ -11,9 +11,9 @@ def inst = Jenkins.getInstance()
 def desc = inst.getDescriptor("jenkins.plugins.nodejs.tools.NodeJSInstallation")
 
 def versions = [
-  "node-8": "8.2.1",
+  "node-8": "8.5.0",
   "node-7": "7.10.1",
-  "node-6": "6.11.1"
+  "node-6": "6.11.3"
 ]
 def installations = [];
 
