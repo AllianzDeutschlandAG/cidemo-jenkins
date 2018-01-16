@@ -62,7 +62,7 @@ pipeline {
     }
 
     tools {
-        nodejs 'node-7'
+        nodejs 'node-8'
     }
 
     parameters {
@@ -75,12 +75,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-
-        stage('NPM Install') {
-            steps {
-                sh 'npm install'
             }
         }
 
