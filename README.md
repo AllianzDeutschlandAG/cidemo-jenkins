@@ -19,7 +19,7 @@ docker-compose up -d --build jenkins
 
 ## Jenkins Image
 
-Our `Dockerfile` has created a custom Jenkins image, which two additional features:
+Our `Dockerfile` has created a custom Jenkins image with two additional features:
 
 - the Chrome browser is installed and will be used for unit tests.
 - we've added the Cloud Foundry CLI which will be using for deployment.
@@ -103,7 +103,7 @@ pipeline {
 }
 ```
 
-The pipeline code above is just an example of simple it is to define jobs using the [Jenkins Declarative Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/).
+It is that simple to define a pipeline using the [Jenkins Declarative Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/).
 
 ## License (MIT)
 
