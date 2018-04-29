@@ -9,6 +9,7 @@ services:
     environment:
       - ADMIN_USER=jenkins
       - ADMIN_PASSWORD=jenkins
+      - PIPELINE_LIBRARY_REMOTE=https://github.com/allianz-de/cidemo-pipeline-library.git
 
 volumes:
   jenkins_demo:

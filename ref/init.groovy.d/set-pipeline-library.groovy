@@ -6,7 +6,7 @@ import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever
 
 println "--> Pre-configuring demo-pipeline-library"
 
-String remote = 'https://github.com/AllianzDeutschlandAG/cidemo-pipeline-library.git'
+String remote = System.getenv('PIPELINE_LIBRARY_REMOTE')
 String id = java.util.UUID.randomUUID().toString()
 String libraryId = 'demo-pipeline-library'
 String credentialsId = 'github'
