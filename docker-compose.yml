@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jenkins:
+    build: .
+    ports:
+      - '8080:8080'
+    volumes:
+     - jenkins_demo:/var/lib/jenkins
+    environment:
+      - ADMIN_USER=jenkins
+      - ADMIN_PASSWORD=jenkins
+
+volumes:
+  jenkins_demo:
