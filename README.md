@@ -1,6 +1,6 @@
 # JavaScript CI Demo - Jenkins
 
-For the Do-It-Yourself Full Stack JavaScript Continuous Integration (CI) demo, we will use [Jenkins](https://jenkins.io/) as our automation server for builds, tests and deployments. Jenkins is an open-source tool anyone can easily setup. 
+For the Do-It-Yourself Full Stack JavaScript Continuous Integration (CI) demo, we will use [Jenkins](https://jenkins.io/) as our automation server for builds, tests and deployments. Jenkins is an open-source tool anyone can easily setup.
 
 ![Beautiful UI with Blue Ocean UI](./images/blue-ocean-1.png)
 
@@ -8,10 +8,10 @@ We will use the [Jenkins community image from the Docker Registry](https://hub.d
 
 ## Use
 
-Start Jenkins in the [CI Demo parent project](https://github.com/julie-ng/js-cidemo) with docker compose
+Clone this repository. And then run:
 
 ```
-docker-compose up -d --build jenkins
+docker-compose up --build
 ```
 
 - Then you can view Jenkins in your browser at [http://localhost:8080/](http://localhost:8080/)
@@ -21,8 +21,8 @@ docker-compose up -d --build jenkins
 
 Our `Dockerfile` has created a custom Jenkins image with two additional features:
 
-- the Chrome browser is installed and will be used for unit tests.
-- we've added the Cloud Foundry CLI which will be using for deployment.
+- Chrome browser is installed and is used for unit tests.
+- Cloud Foundry CLI which is used for deployment.
 
 ### Plugins
 
@@ -39,12 +39,12 @@ We also preloaded our Jenkins with some plugins for our toolchain and an improve
 
 ### Skip Startup
 
-These changes were made for convenience for a presentation:
+These changes were made for convenience of demo presentations:
 
 - skips setup wizard.
 - sets basic security defaults to avoid warnings on load.
 
-and are _not meant as a recommendation_! For more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
+These  are _not meant as a recommendation_! For more about preinstalled configurations, see the [official documentation](https://github.com/jenkinsci/docker/blob/master/README.md).
 
 ## Pipelines
 
