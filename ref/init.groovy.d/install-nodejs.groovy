@@ -10,9 +10,9 @@ def instance = Jenkins.getInstance()
 def descriptor = instance.getDescriptor('jenkins.plugins.nodejs.tools.NodeJSInstallation')
 
 def versions = [
-  'node-8': '8.5.0',
-  'node-7': '7.10.1',
-  'node-6': '6.11.3'
+  'node-8': '8.11.3',
+  'node-9': '9.11.12',
+  'node-10': '10.4.1'
 ]
 def installations = []
 
