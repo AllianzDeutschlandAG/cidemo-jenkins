@@ -24,6 +24,20 @@ Our `Dockerfile` has created a custom Jenkins image with two additional features
 - Chrome browser is installed and is used for unit tests.
 - Cloud Foundry CLI which is used for deployment.
 
+### LTS Tag
+
+This demo uses the Long Term Support (LTS) tag, instead of default latest.
+
+```
+FROM jenkins/jenkins:lts
+```
+
+When logged-in, the UI sometimes shows this kind of message appears:
+
+> New version of Jenkins (2.121.1) is available for download (changelog).
+
+It may also accompany a warning. This is just a demo. When you customizing your own Jenkins image, you will probably want to be more specific about which tag you choose.
+
 ### Plugins
 
 We also preloaded our Jenkins with some plugins for our toolchain and an improved workflow:
